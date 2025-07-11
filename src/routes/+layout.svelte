@@ -1,7 +1,18 @@
 <script lang="ts">
 	import '../app.css';
+	import Footer from './footer.svelte';
+	import Header from './header.svelte';
+	import { ModeWatcher } from 'mode-watcher';
+	import { Toaster } from '$lib/components/ui/sonner/index.js';
+	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
 
 	let { children } = $props();
 </script>
 
-{@render children()}
+<ModeWatcher />
+<Toaster />
+<Tooltip.Provider>
+	<Header />
+	{@render children()}
+	<Footer />
+</Tooltip.Provider>
