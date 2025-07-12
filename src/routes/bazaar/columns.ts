@@ -2,11 +2,11 @@ import type { ColumnDef } from '@tanstack/table-core';
 import type { Product } from '$lib/types/product';
 import { createRawSnippet } from 'svelte';
 import { renderComponent, renderSnippet } from '$lib/components/ui/data-table/index.js';
-import { formatCoins } from '$lib/format/coins';
-import { formatNumber } from '$lib/format/number';
-import DataTableCopyButton from './data-table-copy-button.svelte';
-import DataTableSortButton from './data-table-sort-button.svelte';
-import { formatPercentage } from '$lib/format/percentage';
+import { formatCoins } from '$lib/helpers/coins';
+import { formatNumber } from '$lib/helpers/number';
+import CopyButton from '$lib/components/data-table/CopyButton.svelte';
+import SortButton from '$lib/components/data-table/SortButton.svelte';
+import { formatPercentage } from '$lib/helpers/percentage';
 
 export const columns: ColumnDef<Product>[] = [
 	{
@@ -16,13 +16,13 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		id: 'copy',
 		cell: ({ row }) => {
-			return renderComponent(DataTableCopyButton, { text: `/bz ${row.original.item}` });
+			return renderComponent(CopyButton, { text: `/bz ${row.original.item}` });
 		}
 	},
 	{
 		accessorKey: 'buyOrderPrice',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Buy Order Price'
 			}),
@@ -41,7 +41,7 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		accessorKey: 'sellOrderPrice',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Sell Order Price'
 			}),
@@ -60,7 +60,7 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		accessorKey: 'profitPerFlip',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Profit Per Flip'
 			}),
@@ -79,7 +79,7 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		accessorKey: 'profitMargin',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Profit Margin'
 			}),
@@ -98,7 +98,7 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		accessorKey: 'flipsPerHour',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Flips Per Hour'
 			}),
@@ -117,7 +117,7 @@ export const columns: ColumnDef<Product>[] = [
 	{
 		accessorKey: 'profitPerHour',
 		header: ({ column }) =>
-			renderComponent(DataTableSortButton, {
+			renderComponent(SortButton, {
 				column,
 				text: 'Profit Per Hour'
 			}),

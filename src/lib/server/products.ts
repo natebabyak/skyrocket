@@ -1,6 +1,6 @@
 import { fetchBazaar } from '$lib/server/bazaar.js';
 import { fetchItems } from '$lib/server/items.js';
-import { formatName } from '$lib/format/name.js';
+import { formatName } from '$lib/helpers/name.js';
 import type { Product } from '$lib/types/product.js';
 
 export async function getProducts(): Promise<Product[]> {
