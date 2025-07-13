@@ -3,5 +3,7 @@
 </script>
 
 <footer>
-	<p>&copy; {year} Nate Babyak. All rights reserved.</p>
+	<p class="text-muted-foreground text-center">
+		&copy; {year} Nate Babyak. All rights reserved.
+	</p>
 </footer>
