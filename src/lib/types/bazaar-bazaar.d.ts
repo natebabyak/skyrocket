@@ -1,9 +1,8 @@
-export type Product = {
+export type BazaarBazaar = {
 	item: string;
 	buyOrderPrice: number;
 	sellOrderPrice: number;
 	profitPerFlip: number;
-	profitMargin: number;
 	flipsPerHour: number;
 	profitPerHour: number;
 };

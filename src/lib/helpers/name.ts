@@ -2,7 +2,7 @@ import type { Item } from '$lib/types/items';
 
 const ROMAN_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 
-export function formatName(items: Item[], id: string) {
+export function getName(items: Item[], id: string) {
 	const item = items.find((item) => item.id === id);
 	if (item) return item.name;
 

@@ -1,5 +1,5 @@
 import type { ColumnDef } from '@tanstack/table-core';
-import type { Product } from '$lib/types/product';
+import type { Product } from '$lib/types/bazaar-bazaar';
 import { createRawSnippet } from 'svelte';
 import { renderComponent, renderSnippet } from '$lib/components/ui/data-table/index.js';
 import { formatCoins } from '$lib/helpers/coins';
