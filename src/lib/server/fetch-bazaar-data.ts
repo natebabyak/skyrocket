@@ -1,12 +1,12 @@
-import type { Items } from '$lib/types/items';
+import type { BazaarData } from '$lib/types/bazaar-data';
 
-const TTL = 24 * 60 * 60 * 1000;
-const URL = 'https://api.hypixel.net/v2/resources/skyblock/items';
+const TTL = 5 * 60 * 1000;
+const URL = 'https://api.hypixel.net/v2/skyblock/bazaar';
 
-let cache: Items;
+let cache: BazaarData;
 let lastUpdated = 0;
 
-export async function fetchItems() {
+export async function fetchBazaarData() {
 	const now = Date.now();
 
 	if (!cache || now - lastUpdated > TTL) {

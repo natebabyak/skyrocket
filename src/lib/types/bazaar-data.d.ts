@@ -23,7 +23,7 @@ export type Product = {
 	quick_status: QuickStatus;
 };
 
-export type Bazaar = {
+export type BazaarData = {
 	success: boolean;
 	lastUpdated: number;
 	products: Record<string, Product>;

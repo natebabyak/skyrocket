@@ -4,7 +4,7 @@ export type Item = {
 	id: string;
 };
 
-export type Items = {
+export type ItemsData = {
 	success: boolean;
 	lastUpdated: number;
 	items: Item[];

@@ -1,22 +1,22 @@
 import type { ColumnDef } from '@tanstack/table-core';
-import type { Product } from '$lib/types/bazaar-bazaar';
+import type { BazaarToBazaarData } from '$lib/types/bazaar-to-bazaar-data';
 import { createRawSnippet } from 'svelte';
 import { renderComponent, renderSnippet } from '$lib/components/ui/data-table/index.js';
-import { formatCoins } from '$lib/helpers/coins';
-import { formatNumber } from '$lib/helpers/number';
+import { formatCoins } from '$lib/helpers/format-coins';
+import { formatNumber } from '$lib/helpers/format-number';
 import CopyButton from '$lib/components/data-table/CopyButton.svelte';
 import SortButton from '$lib/components/data-table/SortButton.svelte';
-import { formatPercentage } from '$lib/helpers/percentage';
+import { formatPercentage } from '$lib/helpers/format-percentage';
 
-export const columns: ColumnDef<Product>[] = [
+export const columns: ColumnDef<BazaarToBazaarData>[] = [
 	{
-		accessorKey: 'item',
+		accessorKey: 'itemName',
 		header: 'Item'
 	},
 	{
 		id: 'copy',
 		cell: ({ row }) => {
-			return renderComponent(CopyButton, { text: `/bz ${row.original.item}` });
+			return renderComponent(CopyButton, { text: `/bz ${row.original.itemName}` });
 		}
 	},
 	{
@@ -24,7 +24,7 @@ export const columns: ColumnDef<Product>[] = [
 		header: ({ column }) =>
 			renderComponent(SortButton, {
 				column,
-				text: 'Buy Order Price'
+				text: 'Buy Price'
 			}),
 		cell: ({ row }) => {
 			const buyOrderPriceCellSnippet = createRawSnippet<[number]>((getBuyOrderPrice) => {
@@ -43,7 +43,7 @@ export const columns: ColumnDef<Product>[] = [
 		header: ({ column }) =>
 			renderComponent(SortButton, {
 				column,
-				text: 'Sell Order Price'
+				text: 'Sell Price'
 			}),
 		cell: ({ row }) => {
 			const sellOrderPriceCellSnippet = createRawSnippet<[number]>((getSellOrderPrice) => {
@@ -62,7 +62,7 @@ export const columns: ColumnDef<Product>[] = [
 		header: ({ column }) =>
 			renderComponent(SortButton, {
 				column,
-				text: 'Profit Per Flip'
+				text: 'Profit/Flip'
 			}),
 		cell: ({ row }) => {
 			const profitPerFlipCellSnippet = createRawSnippet<[number]>((getProfitPerFlip) => {
@@ -100,7 +100,7 @@ export const columns: ColumnDef<Product>[] = [
 		header: ({ column }) =>
 			renderComponent(SortButton, {
 				column,
-				text: 'Flips Per Hour'
+				text: 'Flips/h'
 			}),
 		cell: ({ row }) => {
 			const flipsPerHourCellSnippet = createRawSnippet<[number]>((getFlipsPerHour) => {
@@ -119,7 +119,7 @@ export const columns: ColumnDef<Product>[] = [
 		header: ({ column }) =>
 			renderComponent(SortButton, {
 				column,
-				text: 'Profit Per Hour'
+				text: 'Profit/h'
 			}),
 		cell: ({ row }) => {
 			const profitPerHourCellSnippet = createRawSnippet<[number]>((getProfitPerHour) => {

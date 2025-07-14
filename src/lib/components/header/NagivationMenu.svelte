@@ -1,116 +1,103 @@
 <script lang="ts">
+	import brick from '$lib/assets/brick.png';
+	import cookie from '$lib/assets/cookie.png';
+	import enchantedDiamond from '$lib/assets/enchanted-diamond.png';
+	import enchantedEmerald from '$lib/assets/enchanted-emerald.png';
+	import enchantedFeather from '$lib/assets/enchanted-feather.png';
+	import goldIngot from '$lib/assets/gold-ingot.png';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
+	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
+	import netherStar from '$lib/assets/nether-star.png';
+	import pinkDye from '$lib/assets/pink-dye.png';
+	import rabbitHide from '$lib/assets/rabbit-hide.png';
+	import sunflower from '$lib/assets/sunflower.png';
 
-	type Item = {
-		trigger: string;
-		links: {
-			src?: string;
-			href: string;
-			title: string;
-		}[];
-	};
-
-	const items: Item[] = [
+	const currencies = [
 		{
-			trigger: 'Bazaar',
-			links: [
-				{
-					src: 'https://wiki.hypixel.net/images/5/54/Minecraft_items_name_tag.png',
-					href: '/bazaar/bazaar-to-bazaar',
-					title: 'Bazaar to Bazaar',
-				},
-				{
-					href: '/bazaar/bazaar-to-npc',
-					title: 'Bazaar to NPC',
-				},
-				{
-					href: '/bazaar/npc-to-bazaar',
-					title: 'NPC to Bazaar',
-				}
-			]
+			href: '/currencies/ananke-feathers',
+			title: 'Ananke Feathers',
+			src: enchantedFeather
 		},
 		{
-			trigger: 'Currency',
-			links: [
-				{
-					src: 'https://wiki.hypixel.net/images/a/a9/SkyBlock_items_enchanted_feather.gif',
-					href: '/currency/ananke-feathers',
-					title: 'Ananke Feathers'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/2/20/SkyBlock_items_enchanted_diamond.gif',
-					href: '/currency/bits',
-					title: 'Bits'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/9/9e/Minecraft_items_cookie.png',
-					href: '/currency/chocolate',
-					title: 'Chocolate'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/d/d0/Minecraft_items_brick.png',
-					href: '/currency/copper',
-					title: 'Copper'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/4/4f/Minecraft_items_gold_ingot.png',
-					href: '/currency/medals',
-					title: 'Medals'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/b/be/Minecraft_items_pink_dye.png',
-					href: '/currency/motes',
-					title: 'Motes'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/4/43/SkyBlock_items_nether_star.gif',
-					href: '/currency/north-stars',
-					title: 'North Stars'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/b/ba/Minecraft_items_rabbit_hide.png',
-					href: '/currency/pelts',
-					title: 'Pelts'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/4/42/SkyBlock_items_enchanted_emerald.gif',
-					href: '/currency/skyblock-gems',
-					title: 'SkyBlock Gems'
-				}
-			]
+			href: '/currencies/bits',
+			title: 'Bits',
+			src: enchantedDiamond
 		},
 		{
-			trigger: 'Profit',
-			links: [
-				{
-					src: 'https://wiki.hypixel.net/images/c/c5/Minecraft_items_tripwire_hook.png',
-					href: '/profit/frozen-corpses',
-					title: 'Frozen Corpses'
-				},
-				{
-					src: 'https://wiki.hypixel.net/images/3/3e/SkyBlock_items_kuudra_infernal_tier_key.png',
-					href: '/profit/kuudra',
-					title: 'Kuudra'
-				}
-			]
+			href: '/currencies/carnival-tokens',
+			title: 'Carnival Tokens',
+			src: sunflower
+		},
+		{
+			href: '/currencies/chocolate',
+			title: 'Chocolate',
+			src: cookie
+		},
+		{
+			href: '/currencies/copper',
+			title: 'Copper',
+			src: brick
+		},
+		{
+			href: '/currencies/medals',
+			title: 'Medals',
+			src: goldIngot
+		},
+		{
+			href: '/currencies/motes',
+			title: 'Motes',
+			src: pinkDye
+		},
+		{
+			href: '/currencies/north-stars',
+			title: 'North Stars',
+			src: netherStar
+		},
+		{
+			href: '/currencies/pelts',
+			title: 'Pelts',
+			src: rabbitHide
+		},
+		{
+			href: '/currencies/skyblock-gems',
+			title: 'SkyBlock Gems',
+			src: enchantedEmerald
 		}
 	];
 </script>
 
 <NavigationMenu.Root viewport={false}>
 	<NavigationMenu.List>
-		{#each items as item}
-			<NavigationMenu.Item>
-				<NavigationMenu.Trigger>{item.trigger}</NavigationMenu.Trigger>
-				<NavigationMenu.Content class="p-2 w-fit">
-					{#each item.links as link}
-						<NavigationMenu.Link href={link.href} class="flex-row items-center gap-2">
-							<img alt={link.title} src={link.src} class="size-5" />
-							<div class="font-medium whitespace-nowrap">{link.title}</div>
-						</NavigationMenu.Link>
+		<NavigationMenu.Item>
+			<NavigationMenu.Link>
+				{#snippet child()}
+					<a href="/bazaar" class={navigationMenuTriggerStyle()}>Bazaar</a>
+				{/snippet}
+			</NavigationMenu.Link>
+		</NavigationMenu.Item>
+		<NavigationMenu.Item>
+			<NavigationMenu.Link>
+				{#snippet child()}
+					<a href="/crafts" class={navigationMenuTriggerStyle()}>Crafts</a>
+				{/snippet}
+			</NavigationMenu.Link>
+		</NavigationMenu.Item>
+		<NavigationMenu.Item>
+			<NavigationMenu.Trigger>Currencies</NavigationMenu.Trigger>
+			<NavigationMenu.Content>
+				<ul class="grid w-[200px] p-2">
+					{#each currencies as { href, title, src }}
+						<li>
+							<NavigationMenu.Link {href} class="flex-row items-center gap-2">
+								<img alt={title} {src} class="size-5" />
+								<p class="font-medium">
+									{title}
+								</p>
+							</NavigationMenu.Link>
+						</li>
 					{/each}
-				</NavigationMenu.Content>
-			</NavigationMenu.Item>
-		{/each}
+				</ul>
+			</NavigationMenu.Content>
+		</NavigationMenu.Item>
 	</NavigationMenu.List>
 </NavigationMenu.Root>

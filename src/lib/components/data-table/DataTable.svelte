@@ -77,13 +77,13 @@
 <div class="flex items-center">
 	<Input
 		onchange={(e) => {
-			table.getColumn('item')?.setFilterValue(e.currentTarget.value);
+			table.getColumn('name')?.setFilterValue(e.currentTarget.value);
 		}}
 		oninput={(e) => {
-			table.getColumn('item')?.setFilterValue(e.currentTarget.value);
+			table.getColumn('name')?.setFilterValue(e.currentTarget.value);
 		}}
 		placeholder="Filter items..."
-		value={(table.getColumn('item')?.getFilterValue() as string) ?? ''}
+		value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
 		class="w-sm"
 	/>
 </div>
@@ -117,51 +117,47 @@
 		{/each}
 	</Table.Body>
 </Table.Root>
-<div class="relative">
-	<div class="absolute right-0 flex">
-		<p>Items Per Page</p>
-		<Select.Root type="single" bind:value onValueChange={() => table.setPageSize(parseInt(value))}>
-			<Select.Trigger>{value}</Select.Trigger>
-			<Select.Content>
-				{#each pageSizes as pageSize}
-					<Select.Item value={pageSize.toString()}>{pageSize}</Select.Item>
-				{/each}
-			</Select.Content>
-		</Select.Root>
-	</div>
-	<Pagination.Root count={data.length} class="absolute">
-		{#snippet children({ pages, currentPage })}
-			<Pagination.Content>
-				<Pagination.Item>
-					<Pagination.PrevButton
-						disabled={!table.getCanPreviousPage()}
-						onclick={() => table.previousPage()}
-					/>
-				</Pagination.Item>
-				{#each pages as page (page.key)}
-					{#if page.type === 'ellipsis'}
-						<Pagination.Item>
-							<Pagination.Ellipsis />
-						</Pagination.Item>
-					{:else}
-						<Pagination.Item>
-							<Pagination.Link
-								isActive={currentPage === page.value}
-								onclick={() => table.setPageIndex(page.value)}
-								{page}
-							>
-								{page.value}
-							</Pagination.Link>
-						</Pagination.Item>
-					{/if}
-				{/each}
-				<Pagination.Item>
-					<Pagination.NextButton
-						disabled={!table.getCanNextPage()}
-						onclick={() => table.nextPage()}
-					/>
-				</Pagination.Item>
-			</Pagination.Content>
-		{/snippet}
-	</Pagination.Root>
-</div>
+<Pagination.Root count={data.length}>
+	{#snippet children({ pages, currentPage })}
+		<Pagination.Content>
+			<Pagination.Item>
+				<Pagination.PrevButton
+					disabled={!table.getCanPreviousPage()}
+					onclick={() => table.previousPage()}
+				/>
+			</Pagination.Item>
+			{#each pages as page (page.key)}
+				{#if page.type === 'ellipsis'}
+					<Pagination.Item>
+						<Pagination.Ellipsis />
+					</Pagination.Item>
+				{:else}
+					<Pagination.Item>
+						<Pagination.Link
+							isActive={currentPage === page.value}
+							onclick={() => table.setPageIndex(page.value)}
+							{page}
+						>
+							{page.value}
+						</Pagination.Link>
+					</Pagination.Item>
+				{/if}
+			{/each}
+			<Pagination.Item>
+				<Pagination.NextButton
+					disabled={!table.getCanNextPage()}
+					onclick={() => table.nextPage()}
+				/>
+			</Pagination.Item>
+		</Pagination.Content>
+	{/snippet}
+</Pagination.Root>
+<p>Items Per Page</p>
+<Select.Root type="single" bind:value onValueChange={() => table.setPageSize(parseInt(value))}>
+	<Select.Trigger>{value}</Select.Trigger>
+	<Select.Content>
+		{#each pageSizes as pageSize}
+			<Select.Item value={pageSize.toString()}>{pageSize}</Select.Item>
+		{/each}
+	</Select.Content>
+</Select.Root>

@@ -1,18 +1,10 @@
-import type { Item } from '$lib/types/items';
-
 const ROMAN_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 
-export function getName(items: Item[], id: string) {
-	const item = items.find((item) => item.id === id);
-	if (item) return item.name;
+export function formatName(id: string) {
+	if (id === 'XYZ') return 'XYZ';
 
-	if (id.startsWith('ESSENCE_')) {
-		id = id.slice(8);
-		id += '_Essence';
-	} else if (id.startsWith('ENCHANTMENT_')) {
-		id = id.slice(12);
-
-		if (id.startsWith('ULTIMATE_')) id = id.slice(9);
+	if (id.startsWith('ENCHANTMENT_')) {
+		id = id.replace('ENCHANTMENT_', '').replace('ULTIMATE_', '');
 
 		const words = id.split('_');
 		const level = ROMAN_NUMERALS[parseInt(words.pop()!) - 1];
@@ -20,6 +12,11 @@ export function getName(items: Item[], id: string) {
 		return (
 			words.map((word) => word.charAt(0) + word.slice(1).toLowerCase()).join(' ') + ' ' + level
 		);
+	}
+
+	if (id.startsWith('ESSENCE_')) {
+		id = id.slice(8);
+		id += '_Essence';
 	} else if (id.startsWith('§')) {
 		id = id.slice(2);
 	}

@@ -4,7 +4,7 @@
 	import ChevronsDownUp from '@lucide/svelte/icons/chevrons-up-down';
 	import ChevronUp from '@lucide/svelte/icons/chevron-up';
 	import type { Column } from '@tanstack/table-core';
-	import type { Product } from '$lib/types/bazaar-bazaar';
+	import type { Product } from '$lib/types/bazaar-to-bazaar-data';
 
 	const { column, text }: { column: Column<Product, unknown>; text: string } = $props();
 
