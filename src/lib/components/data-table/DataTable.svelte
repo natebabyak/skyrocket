@@ -3,13 +3,10 @@
 		type ColumnDef,
 		type PaginationState,
 		type SortingState,
-		type ColumnFiltersState,
 		getCoreRowModel,
 		getPaginationRowModel,
 		getSortedRowModel,
-		getFilteredRowModel
 	} from '@tanstack/table-core';
-	import { Input } from '$lib/components/ui/input/index.js';
 	import { createSvelteTable, FlexRender } from '$lib/components/ui/data-table';
 	import * as Table from '$lib/components/ui/table/index.js';
 	import * as Pagination from '$lib/components/ui/pagination/index.js';
@@ -26,7 +23,6 @@
 
 	let pagination = $state<PaginationState>({ pageIndex: 0, pageSize: 10 });
 	let sorting = $state<SortingState>([]);
-	let columnFilters = $state<ColumnFiltersState>([]);
 
 	const pageSizes = [15, 30, 60, 120];
 
@@ -38,7 +34,6 @@
 		getCoreRowModel: getCoreRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
-		getFilteredRowModel: getFilteredRowModel(),
 		onPaginationChange: (updater) => {
 			if (typeof updater === 'function') {
 				pagination = updater(pagination);
@@ -53,40 +48,17 @@
 				sorting = updater;
 			}
 		},
-		onColumnFiltersChange: (updater) => {
-			if (typeof updater === 'function') {
-				columnFilters = updater(columnFilters);
-			} else {
-				columnFilters = updater;
-			}
-		},
 		state: {
 			get pagination() {
 				return pagination;
 			},
 			get sorting() {
 				return sorting;
-			},
-			get columnFilters() {
-				return columnFilters;
 			}
 		}
 	});
 </script>
 
-<div class="flex items-center">
-	<Input
-		onchange={(e) => {
-			table.getColumn('name')?.setFilterValue(e.currentTarget.value);
-		}}
-		oninput={(e) => {
-			table.getColumn('name')?.setFilterValue(e.currentTarget.value);
-		}}
-		placeholder="Filter items..."
-		value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
-		class="w-sm"
-	/>
-</div>
 <Table.Root class="w-3/5">
 	<Table.Header>
 		{#each table.getHeaderGroups() as headerGroup (headerGroup.id)}

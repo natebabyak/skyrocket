@@ -1,8 +1,8 @@
 <script lang="ts">
-	import GithubLink from './GithubLink.svelte';
-	import NavigationMenu from './NagivationMenu.svelte';
-	import SkyrocketLink from './SkyrocketLink.svelte';
-	import ThemeButton from './ThemeButton.svelte';
+	import GithubLink from "./GithubLink.svelte";
+	import NavigationMenu from "./NagivationMenu.svelte";
+	import SkyrocketLink from "./SkyrocketLink.svelte";
+	import ThemeButton from "./ThemeButton.svelte";
 </script>
 
 <header class="flex items-center justify-between p-4">
@@ -11,7 +11,7 @@
 		<NavigationMenu />
 	</div>
 	<div class="flex items-center">
-		<GithubLink />
+		<GithubLink/>
 		<ThemeButton />
 	</div>
 </header>

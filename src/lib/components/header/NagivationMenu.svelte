@@ -1,103 +1,138 @@
 <script lang="ts">
-	import brick from '$lib/assets/brick.png';
-	import cookie from '$lib/assets/cookie.png';
-	import enchantedDiamond from '$lib/assets/enchanted-diamond.png';
-	import enchantedEmerald from '$lib/assets/enchanted-emerald.png';
-	import enchantedFeather from '$lib/assets/enchanted-feather.png';
-	import goldIngot from '$lib/assets/gold-ingot.png';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
-	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
-	import netherStar from '$lib/assets/nether-star.png';
-	import pinkDye from '$lib/assets/pink-dye.png';
-	import rabbitHide from '$lib/assets/rabbit-hide.png';
-	import sunflower from '$lib/assets/sunflower.png';
 
-	const currencies = [
+	type Item = {
+		trigger: string;
+		links: {
+			href: string;
+			title: string;
+		}[];
+	};
+
+	const items: Item[] = [
 		{
-			href: '/currencies/ananke-feathers',
-			title: 'Ananke Feathers',
-			src: enchantedFeather
+			trigger: 'Currencies',
+			links: [
+				{
+					href: '/currencies/ananke-feathers',
+					title: 'Ananke Feathers'
+				},
+				{
+					href: '/currencies/bits',
+					title: 'Bits'
+				},
+				{
+					href: '/currencies/carnival-tokens',
+					title: 'Carnival Tokens'
+				},
+				{
+					href: '/currencies/chocolate',
+					title: 'Chocolate'
+				},
+				{
+					href: '/currencies/copper',
+					title: 'Copper'
+				},
+				{
+					href: '/currencies/medals',
+					title: 'Medals'
+				},
+				{
+					href: '/currencies/motes',
+					title: 'Motes'
+				},
+				{
+					href: '/currencies/north-stars',
+					title: 'North Stars'
+				},
+				{
+					href: '/currencies/pelts',
+					title: 'Pelts'
+				},
+				{
+					href: '/currencies/skyblock-gems',
+					title: 'SkyBlock Gems'
+				}
+			]
 		},
 		{
-			href: '/currencies/bits',
-			title: 'Bits',
-			src: enchantedDiamond
+			trigger: 'Flips',
+			links: [
+				{
+					href: '/flips/bazaar',
+					title: 'Bazaar'
+				},
+				{
+					href: '/flips/books',
+					title: 'Books'
+				},
+				{
+					href: '/flips/crafts',
+					title: 'Crafts'
+				},
+				{
+					href: '/flips/forge',
+					title: 'Forge'
+				},
+				{
+					href: '/flips/kat',
+					title: 'Kat'
+				}
+			]
 		},
 		{
-			href: '/currencies/carnival-tokens',
-			title: 'Carnival Tokens',
-			src: sunflower
-		},
-		{
-			href: '/currencies/chocolate',
-			title: 'Chocolate',
-			src: cookie
-		},
-		{
-			href: '/currencies/copper',
-			title: 'Copper',
-			src: brick
-		},
-		{
-			href: '/currencies/medals',
-			title: 'Medals',
-			src: goldIngot
-		},
-		{
-			href: '/currencies/motes',
-			title: 'Motes',
-			src: pinkDye
-		},
-		{
-			href: '/currencies/north-stars',
-			title: 'North Stars',
-			src: netherStar
-		},
-		{
-			href: '/currencies/pelts',
-			title: 'Pelts',
-			src: rabbitHide
-		},
-		{
-			href: '/currencies/skyblock-gems',
-			title: 'SkyBlock Gems',
-			src: enchantedEmerald
+			trigger: 'Profits',
+			links: [
+				{
+					href: '/profits/archfiend-dice',
+					title: 'Archfiend Dice'
+				},
+				{
+					href: '/profits/dungeons',
+					title: 'Dungeons'
+				},
+				{
+					href: '/profits/farming',
+					title: 'Farming'
+				},
+				{
+					href: '/profits/frozen-corpses',
+					title: 'Frozen Corpses'
+				},
+				{
+					href: '/profits/jerry-boxes',
+					title: 'Jerry Boxes'
+				},
+				{
+					href: '/profits/kuudra',
+					title: 'Kuudra'
+				},
+				{
+					href: '/profits/mining',
+					title: 'Mining'
+				}
+			]
 		}
 	];
 </script>
 
 <NavigationMenu.Root viewport={false}>
 	<NavigationMenu.List>
-		<NavigationMenu.Item>
-			<NavigationMenu.Link>
-				{#snippet child()}
-					<a href="/bazaar" class={navigationMenuTriggerStyle()}>Bazaar</a>
-				{/snippet}
-			</NavigationMenu.Link>
-		</NavigationMenu.Item>
-		<NavigationMenu.Item>
-			<NavigationMenu.Link>
-				{#snippet child()}
-					<a href="/crafts" class={navigationMenuTriggerStyle()}>Crafts</a>
-				{/snippet}
-			</NavigationMenu.Link>
-		</NavigationMenu.Item>
-		<NavigationMenu.Item>
-			<NavigationMenu.Trigger>Currencies</NavigationMenu.Trigger>
-			<NavigationMenu.Content>
-				<ul class="grid w-[200px] p-2">
-					{#each currencies as { href, title, src }}
+		{#each items as { trigger, links }}
+			<NavigationMenu.Item>
+				<NavigationMenu.Trigger>{trigger}</NavigationMenu.Trigger>
+				<NavigationMenu.Content>
+					<ul class="grid w-[200px] p-2">
 						<li>
-							<NavigationMenu.Link {href} class="flex-row items-center gap-2">
-								<img alt={title} {src} class="size-5" />
-								<p class="font-medium">
-									{title}
-								</p>
-							</NavigationMenu.Link>
+							{#each links as { href, title }}
+								<NavigationMenu.Link {href}>
+									<div class="font-medium">{title}</div>
+								</NavigationMenu.Link>
+							{/each}
 						</li>
-					{/each}
-				</ul>
-			</NavigationMenu.Content>
-		</NavigationMenu.Item>
+					</ul>
+				</NavigationMenu.Content>
+			</NavigationMenu.Item>
+		{/each}
 	</NavigationMenu.List>
 </NavigationMenu.Root>
