@@ -124,23 +124,25 @@
 	];
 </script>
 
-<NavigationMenu.Root viewport={false}>
-	<NavigationMenu.List>
-		{#each items as { trigger, links }}
-			<NavigationMenu.Item>
-				<NavigationMenu.Trigger class="bg-inherit">{trigger}</NavigationMenu.Trigger>
-				<NavigationMenu.Content>
-					<ul class="grid w-[200px] p-2">
-						<li>
-							{#each links as { href, title }}
-								<NavigationMenu.Link {href}>
-									<div class="font-medium">{title}</div>
-								</NavigationMenu.Link>
-							{/each}
-						</li>
-					</ul>
-				</NavigationMenu.Content>
-			</NavigationMenu.Item>
-		{/each}
-	</NavigationMenu.List>
-</NavigationMenu.Root>
+<div class="">
+	<NavigationMenu.Root viewport={false}>
+		<NavigationMenu.List>
+			{#each items as { trigger, links }}
+				<NavigationMenu.Item>
+					<NavigationMenu.Trigger class="bg-inherit">{trigger}</NavigationMenu.Trigger>
+					<NavigationMenu.Content>
+						<ul class="grid w-[200px] p-2">
+							<li>
+								{#each links as { href, title }}
+									<NavigationMenu.Link {href}>
+										<div class="font-medium">{title}</div>
+									</NavigationMenu.Link>
+								{/each}
+							</li>
+						</ul>
+					</NavigationMenu.Content>
+				</NavigationMenu.Item>
+			{/each}
+		</NavigationMenu.List>
+	</NavigationMenu.Root>
+</div>

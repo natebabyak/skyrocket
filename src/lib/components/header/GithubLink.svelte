@@ -6,9 +6,11 @@
 
 <Tooltip.Root>
 	<Tooltip.Trigger>
-		<Button href="https://github.com/natebabyak/skyrocket" size="icon" variant="ghost">
-			<GithubIcon class="size-4" />
-		</Button>
+		{#snippet child({ props })}
+			<Button href="https://github.com/natebabyak/skyrocket" {...props} size="icon" variant="ghost">
+				<GithubIcon />
+			</Button>
+		{/snippet}
 	</Tooltip.Trigger>
 	<Tooltip.Content>
 		<div class="font-medium">GitHub</div>

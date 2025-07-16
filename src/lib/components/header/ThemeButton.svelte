@@ -9,15 +9,17 @@
 
 <Tooltip.Root>
 	<Tooltip.Trigger>
-		<Button onclick={toggleMode} size="icon" variant="ghost">
-			{#if !mode.current}
-				<Skeleton class="size-4 rounded-full" />
-			{:else if mode.current === 'dark'}
-				<MoonIcon class="size-4" />
-			{:else}
-				<SunIcon class="size-4" />
-			{/if}
-		</Button>
+		{#snippet child({ props })}
+			<Button onclick={toggleMode} {...props} size="icon" variant="ghost">
+				{#if !mode.current}
+					<Skeleton class="size-4 rounded-full" />
+				{:else if mode.current === 'dark'}
+					<MoonIcon class="size-4" />
+				{:else}
+					<SunIcon class="size-4" />
+				{/if}
+			</Button>
+		{/snippet}
 	</Tooltip.Trigger>
 	<Tooltip.Content>
 		<div class="font-medium">Theme</div>

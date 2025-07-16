@@ -5,5 +5,8 @@
 	let { data } = $props();
 </script>
 
-<DataTable data={data.rows} {columns} />
+<svelte:head>
+	<title>Bazaar Flips - Skyrocket</title>
+</svelte:head>
 
+<DataTable data={data.rows} {columns} />

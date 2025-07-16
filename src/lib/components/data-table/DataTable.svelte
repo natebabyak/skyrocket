@@ -17,6 +17,11 @@
 	import * as Pagination from '$lib/components/ui/pagination/index.js';
 	import * as Table from '$lib/components/ui/table/index.js';
 
+	type DataTableProps<TData, TValue> = {
+		columns: ColumnDef<TData, TValue>[];
+		data: TData[];
+	};
+
 	let { columns, data }: DataTableProps<TData, TValue> = $props();
 
 	let pagination = $state<PaginationState>({ pageIndex: 0, pageSize: 15 });

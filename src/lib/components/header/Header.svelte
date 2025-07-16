@@ -1,6 +1,7 @@
 <script lang="ts">
 	import GithubLink from './GithubLink.svelte';
 	import NavigationMenu from './NagivationMenu.svelte';
+	import SearchButton from './SearchButton.svelte';
 	import SkyrocketLink from './SkyrocketLink.svelte';
 	import ThemeButton from './ThemeButton.svelte';
 </script>
@@ -13,6 +14,7 @@
 		<NavigationMenu />
 	</div>
 	<div class="flex items-center">
+		<SearchButton />
 		<GithubLink />
 		<ThemeButton />
 	</div>
