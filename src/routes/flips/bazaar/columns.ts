@@ -1,109 +1,98 @@
 import type { ColumnDef } from '@tanstack/table-core';
-import { createRawSnippet } from 'svelte';
-import { renderComponent, renderSnippet } from '$lib/components/ui/data-table/index.js';
-import { formatCoins } from '$lib/helpers/format-coins';
-import { formatNumber } from '$lib/helpers/format-number';
-import CopyButton from '$lib/components/data-table/CopyButton.svelte';
-import SortButton from '$lib/components/data-table/SortButton.svelte';
+import { renderComponent } from '$lib/components/ui/data-table/index.js';
+import DataTableHeader from '$lib/components/data-table/DataTableHeader.svelte';
+import DataTableNumberCell from '$lib/components/data-table/DataTableNumberCell.svelte';
+import DataTableCopyCell from '$lib/components/data-table/DataTableCopyCell.svelte';
 
 export type Column = {
 	item: string;
-	buyOrderPrice: number;
-	sellOrderPrice: number;
-	profitPerFlip: number;
+	buyPrice: number;
+	sellPrice: number;
+	profit: number;
 	flipsPerHour: number;
 	profitPerHour: number;
-}
+};
 
 export const columns: ColumnDef<Column>[] = [
 	{
-		accessorKey: 'itemName',
+		accessorKey: 'item',
 		header: ({ column }) =>
-			renderComponent(SortButton, {
+			renderComponent(DataTableHeader, {
 				column,
-				text: 'Item'
-			})
-	},
-	{
-		id: '_',
+				headerText: 'Item'
+			}),
 		cell: ({ row }) => {
-			return renderComponent(CopyButton, { text: `/bz ${row.original.item}` });
+			const item = row.getValue<string>('item');
+
+			return renderComponent(DataTableCopyCell, {
+				cellText: item,
+				copyText: `/bz ${item}`
+			});
 		}
 	},
 	{
 		accessorKey: 'buyPrice',
 		header: ({ column }) =>
-			renderComponent(SortButton, {
+			renderComponent(DataTableHeader, {
 				column,
-				text: 'Buy Price'
+				headerText: 'Buy Price'
 			}),
-		cell: ({ row }) => {
-			const buyPriceCellSnippet = createRawSnippet<[number]>((getBuyPrice) => {
-				const buyPrice = getBuyPrice();
-
-				return {
-					render: () => `<div class="text-right">${formatCoins(buyPrice)}</div>`
-				};
-			});
-
-			return renderSnippet(buyPriceCellSnippet, row.getValue('buyPrice'));
-		}
+		cell: ({ row }) =>
+			renderComponent(DataTableNumberCell, {
+				format: 'coins',
+				value: row.getValue<number>('buyPrice')
+			})
 	},
 	{
 		accessorKey: 'sellPrice',
 		header: ({ column }) =>
-			renderComponent(SortButton, {
+			renderComponent(DataTableHeader, {
 				column,
-				text: 'Sell Price'
+				headerText: 'Sell Price'
 			}),
-		cell: ({ row }) => {
-			const sellPriceCellSnippet = createRawSnippet<[number]>((getSellPrice) => {
-				const sellPrice = getSellPrice();
-
-				return {
-					render: () => `<div class="text-right">${formatCoins(sellPrice)}</div>`
-				};
-			});
-
-			return renderSnippet(sellPriceCellSnippet, row.getValue('sellPrice'));
-		}
+		cell: ({ row }) =>
+			renderComponent(DataTableNumberCell, {
+				format: 'coins',
+				value: row.getValue<number>('sellPrice')
+			})
 	},
 	{
-		accessorKey: 'volume',
+		accessorKey: 'profit',
 		header: ({ column }) =>
-			renderComponent(SortButton, {
+			renderComponent(DataTableHeader, {
 				column,
-				text: 'Volume'
+				headerText: 'Profit'
 			}),
-		cell: ({ row }) => {
-			const volumeCellSnippet = createRawSnippet<[number]>((getFlipsPerHour) => {
-				const flipsPerHour = getFlipsPerHour();
-
-				return {
-					render: () => `<div class="text-right">${formatNumber(flipsPerHour)}</div>`
-				};
-			});
-
-			return renderSnippet(volumeCellSnippet, row.getValue('volume'));
-		}
+		cell: ({ row }) =>
+			renderComponent(DataTableNumberCell, {
+				format: 'coins',
+				value: row.getValue<number>('profit')
+			})
+	},
+	{
+		accessorKey: 'flipsPerHour',
+		header: ({ column }) =>
+			renderComponent(DataTableHeader, {
+				column,
+				headerText: 'Flips/h'
+			}),
+		cell: ({ row }) =>
+			renderComponent(DataTableNumberCell, {
+				format: 'number',
+				value: row.getValue<number>('flipsPerHour')
+			})
 	},
 	{
 		accessorKey: 'profitPerHour',
 		header: ({ column }) =>
-			renderComponent(SortButton, {
+			renderComponent(DataTableHeader, {
 				column,
-				text: 'Profit/h'
+				headerText: 'Profit/h'
 			}),
-		cell: ({ row }) => {
-			const profitPerHourCellSnippet = createRawSnippet<[number]>((getProfitPerHour) => {
-				const profitPerHour = getProfitPerHour();
-
-				return {
-					render: () => `<div class="text-right">${formatCoins(profitPerHour)}</div>`
-				};
-			});
-
-			return renderSnippet(profitPerHourCellSnippet, row.getValue('profitPerHour'));
-		}
+		cell: ({ row }) =>
+			renderComponent(DataTableNumberCell, {
+				format: 'coins',
+				value: row.getValue<number>('profitPerHour')
+			})
 	}
 ];

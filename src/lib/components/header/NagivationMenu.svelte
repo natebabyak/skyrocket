@@ -14,6 +14,10 @@
 			trigger: 'Currencies',
 			links: [
 				{
+					href: '/currencies/agathas-coupons',
+					title: "Agatha's Coupon"
+				},
+				{
 					href: '/currencies/ananke-feathers',
 					title: 'Ananke Feathers'
 				},
@@ -32,6 +36,10 @@
 				{
 					href: '/currencies/copper',
 					title: 'Copper'
+				},
+				{
+					href: '/currencies/jacobs-tickets',
+					title: "Jacob's Tickets"
 				},
 				{
 					href: '/currencies/medals',
@@ -120,7 +128,7 @@
 	<NavigationMenu.List>
 		{#each items as { trigger, links }}
 			<NavigationMenu.Item>
-				<NavigationMenu.Trigger>{trigger}</NavigationMenu.Trigger>
+				<NavigationMenu.Trigger class="bg-inherit">{trigger}</NavigationMenu.Trigger>
 				<NavigationMenu.Content>
 					<ul class="grid w-[200px] p-2">
 						<li>

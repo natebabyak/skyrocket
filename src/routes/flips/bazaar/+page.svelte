@@ -6,3 +6,4 @@
 </script>
 
 <DataTable data={data.rows} {columns} />
+

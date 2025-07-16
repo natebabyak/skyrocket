@@ -13,6 +13,8 @@
 <Toaster />
 <Tooltip.Provider>
 	<Header />
-	{@render children()}
+	<main class="pt-[68px] mx-auto w-4xl">
+		{@render children()}
+	</main>
 	<Footer />
 </Tooltip.Provider>

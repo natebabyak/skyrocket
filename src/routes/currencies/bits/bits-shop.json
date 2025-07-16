@@ -1,0 +1,222 @@
+[
+	{
+		"name": "God Potion",
+		"tag": "GOD_POTION",
+		"bitsCost": 1500
+	},
+	{
+		"name": "Kismet Feather",
+		"tag": "KISMET_FEATHER",
+		"bitsCost": 1350
+	},
+	{
+		"name": "Kat Flower",
+		"tag": "KAT_FLOWER",
+		"bitsCost": 500
+	},
+	{
+		"name": "Kat Bouquet",
+		"tag": "KAT_BOUQUET",
+		"bitsCost": 2500
+	},
+	{
+		"name": "Heat Core",
+		"tag": "HEAT_CORE",
+		"bitsCost": 3000
+	},
+	{
+		"name": "Hyper Catalyst Upgrade",
+		"tag": "HYPER_CATALYST_UPGRADE",
+		"bitsCost": 300
+	},
+	{
+		"name": "Ultimate Carrot Candy Upgrade",
+		"tag": "ULTIMATE_CARROT_CANDY_UPGRADE",
+		"bitsCost": 8000
+	},
+	{
+		"name": "Colossal Experience Bottle Upgrade",
+		"tag": "COLOSSAL_EXPERIENCE_BOTTLE_UPGRADE",
+		"bitsCost": 1200
+	},
+	{
+		"name": "Jumbo Backpack Upgrade",
+		"tag": "JUMBO_BACKPACK_UPGRADE",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Minion Storage X-pender",
+		"tag": "MINION_STORAGE_X_PENDER",
+		"bitsCost": 1500
+	},
+	{
+		"name": "Matriarch's Perfume",
+		"tag": "MATRIARCHS_PERFUME",
+		"bitsCost": 1200
+	},
+	{
+		"name": "Hologram",
+		"tag": "HOLOGRAM",
+		"bitsCost": 2000
+	},
+	{
+		"name": "Ditto Blob",
+		"tag": "DITTO_BLOB",
+		"bitsCost": 600
+	},
+	{
+		"name": "Builder's Wand",
+		"tag": "BUILDERS_WAND",
+		"bitsCost": 12000
+	},
+	{
+		"name": "Block Zapper",
+		"tag": "BLOCK_ZAPPER",
+		"bitsCost": 5000
+	},
+	{
+		"name": "Bits Talisman",
+		"tag": "BITS_TALISMAN",
+		"bitsCost": 15000
+	},
+	{
+		"name": "Pocket Sack-in-a-Sack",
+		"tag": "POCKET_SACK_IN_A_SACK",
+		"bitsCost": 8000
+	},
+	{
+		"name": "Dungeon Sack",
+		"tag": "DUNGEON_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"name": "Rune Sack",
+		"tag": "RUNE_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"name": "Flower Sack",
+		"tag": "FLOWER_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"name": "Dwarven Sack",
+		"tag": "DWARVEN_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"name": "Crystal Hollows Sack",
+		"tag": "CRYSTAL_HOLLOWS_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"name": "Portalizer",
+		"tag": "PORTALIZER",
+		"bitsCost": 4800
+	},
+	{
+		"name": "Abiphone Contacts Trio",
+		"tag": "ABIPHONE_CONTACTS_TRIO",
+		"bitsCost": 6450
+	},
+	{
+		"name": "Sumsung© G3 Abicase",
+		"tag": "SUMSUNG_G3_ABICASE",
+		"bitsCost": 15000
+	},
+	{
+		"name": "Sumsung© GG Abicase",
+		"tag": "SUMSUNG_GG_ABICASE",
+		"bitsCost": 25000
+	},
+	{
+		"name": "Rezar® Abicase",
+		"tag": "REZAR_ABICASE",
+		"bitsCost": 26000
+	},
+	{
+		"name": "Blue™ But Red Abicase",
+		"tag": "BLUE_BUT_RED_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"name": "Actually Blue™ Abicase",
+		"tag": "ACTUALLY_BLUE_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"name": "Blue™ But Green Abicase",
+		"tag": "BLUE_BUT_GREEN_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"name": "Blue™ But Yellow Abicase",
+		"tag": "BLUE_BUT_YELLOW_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"name": "Lighter Blue™ Abicase",
+		"tag": "LIGHTER_BLUE_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"name": "Autopet Rules 2-Pack",
+		"tag": "AUTOPET_RULES_2_PACK",
+		"bitsCost": 21000
+	},
+	{
+		"name": "Pure White Dye",
+		"tag": "PURE_WHITE_DYE",
+		"bitsCost": 250000
+	},
+	{
+		"name": "Pure Black Dye",
+		"tag": "PURE_BLACK_DYE",
+		"bitsCost": 250000
+	},
+	{
+		"name": "Inferno Fuel Block",
+		"tag": "INFERNO_FUEL_BLOCK",
+		"bitsCost": 75
+	},
+	{
+		"name": "Expertise I Book",
+		"tag": "EXPERTISE_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Compact I Book",
+		"tag": "COMPACT_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Cultivating I Book",
+		"tag": "CULTIVATING_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Champion I Book",
+		"tag": "CHAMPION_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Hecatomb I Book",
+		"tag": "HECATOMB_I_BOOK",
+		"bitsCost": 6000
+	},
+	{
+		"name": "Toxophilite I Book",
+		"tag": "TOXOPHILITE_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"name": "Enrichments",
+		"tag": "ENRICHMENTS",
+		"bitsCost": 5000
+	},
+	{
+		"name": "Accessory Enrichment Swapper",
+		"tag": "ACCESSORY_ENRICHMENT_SWAPPER",
+		"bitsCost": 200
+	}
+]
