@@ -10,7 +10,7 @@
 <Tooltip.Root>
 	<Tooltip.Trigger>
 		{#snippet child({ props })}
-			<Button onclick={toggleMode} {...props} size="icon" variant="ghost">
+			<Button {...props} onclick={toggleMode} size="icon" variant="ghost">
 				{#if !mode.current}
 					<Skeleton class="size-4 rounded-full" />
 				{:else if mode.current === 'dark'}

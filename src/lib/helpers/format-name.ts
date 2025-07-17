@@ -13,7 +13,7 @@ export function formatName(name: string) {
 			.slice(0, -2)
 			.map((word) => word[0].toUpperCase() + word.slice(1))
 			.join(' ')
-			.concat(` ${ROMAN_NUMERALS[level]}`);
+			.concat(` ${ROMAN_NUMERALS[level - 1]}`);
 	}
 
 	if (name.startsWith('SHARD_')) {

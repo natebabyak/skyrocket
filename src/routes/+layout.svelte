@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/header/Header.svelte';
+	import Footer from '$lib/components/ui/Footer.svelte';
+	import Header from '$lib/components/ui/header/Header.svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
@@ -13,7 +13,7 @@
 <Toaster />
 <Tooltip.Provider>
 	<Header />
-	<main class="pt-[68px] mx-auto w-4xl">
+	<main class="mx-auto w-full pt-[68px] md:w-2xl lg:w-4xl">
 		{@render children()}
 	</main>
 	<Footer />

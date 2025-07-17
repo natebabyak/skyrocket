@@ -1,37 +1,51 @@
 import bitsShop from '$lib/data/bits-shop.json';
 import { fetchBazaarData } from '$lib/server/fetch-bazaar-data';
-import { fetchItemMetadataElements } from '$lib/server/fetch-item-metadata-elements';
 import { fetchPrices } from '$lib/server/fetch-prices';
 import type { PageServerLoad } from './$types';
+import { fetchSearchResultItems } from '$lib/server/fetch-search-result-items';
 
 export const load: PageServerLoad = async () => {
-	const itemMetadataElements = await fetchItemMetadataElements();
 	const prices = await fetchPrices();
 	const { products } = await fetchBazaarData();
 
-	const rows = bitsShop
-		.map(({ item, bitsCost }) => {
-			const name = itemMetadataElements.find((i) => i.tag === item)?.name ?? `missing ${item}`;
+	const rows = (
+		await Promise.all(
+			bitsShop.map(async ({ name, bitsCost }) => {
+				const searchResultItems = await fetchSearchResultItems(name);
+				if (!searchResultItems || searchResultItems.length === 0) return null;
 
-			const price = Object.keys(prices).includes(item)
-				? prices[item]
-				: Object.keys(products).includes(item) && products[item].buy_summary.length > 0
-					? products[item].buy_summary[0].pricePerUnit
-					: 0;
+				const item = searchResultItems[0];
+				const { iconUrl, id } = item;
+				if (!id) return null;
 
-			const profit = Object.keys(prices).includes(item)
-				? (price < 1e7 ? price * 0.99 : price < 1e8 ? price * 0.98 : price * 0.975) * 0.99
-				: price * 0.98875;
+				let copyText = '';
+				let price = 0;
+				let profit = 0;
 
-			const coinsPerBit = profit / bitsCost;
+				if (id in prices) {
+					copyText = `/ahs ${name}`;
+					price = prices[id];
+					profit = price * (price < 1e7 ? 0.99 : price < 1e8 ? 0.98 : 0.975) * 0.99;
+				} else if (id in products && products[id].sell_summary?.length > 0) {
+					copyText = `/bz ${name}`;
+					price = products[id].buy_summary?.[0]?.pricePerUnit || 0;
+					profit = (price - 0.1) * 0.98875;
+				}
 
-			return {
-				name,
-				bitsCost,
-				price,
-				coinsPerBit
-			};
-		})
+				const coinsPerBit = profit / bitsCost;
+
+				return {
+					icon: iconUrl,
+					name,
+					copyText,
+					bitsCost,
+					price,
+					coinsPerBit
+				};
+			})
+		)
+	)
+		.filter((item): item is NonNullable<typeof item> => item !== null)
 		.sort((a, b) => b.coinsPerBit - a.coinsPerBit);
 
 	return {

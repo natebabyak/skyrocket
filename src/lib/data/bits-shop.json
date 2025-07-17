@@ -1,218 +1,218 @@
 [
 	{
-		"item": "GOD_POTION_2",
+		"name": "God Potion",
 		"bitsCost": 1500
 	},
 	{
-		"item": "KISMET_FEATHER",
+		"name": "Kismet Feather",
 		"bitsCost": 1350
 	},
 	{
-		"item": "KAT_FLOWER",
+		"name": "Kat Flower",
 		"bitsCost": 500
 	},
 	{
-		"item": "KAT_BOUQUET",
+		"name": "Kat Bouquet",
 		"bitsCost": 2500
 	},
 	{
-		"item": "HEAT_CORE",
+		"name": "Heat Core",
 		"bitsCost": 3000
 	},
 	{
-		"item": "HYPER_CATALYST_UPGRADE",
+		"name": "Hyper Catalyst Upgrade",
 		"bitsCost": 300
 	},
 	{
-		"item": "ULTIMATE_CARROT_CANDY_UPGRADE",
+		"name": "Ultimate Carrot Candy Upgrade",
 		"bitsCost": 8000
 	},
 	{
-		"item": "COLOSSAL_EXP_BOTTLE_UPGRADE",
+		"name": "Colossal Experience Bottle Upgrade",
 		"bitsCost": 1200
 	},
 	{
-		"item": "JUMBO_BACKPACK_UPGRADE",
+		"name": "Jumbo Backpack Upgrade",
 		"bitsCost": 4000
 	},
 	{
-		"item": "MINION_STORAGE_EXPANDER",
+		"name": "Minion Storage X-pender",
 		"bitsCost": 1500
 	},
 	{
-		"item": "MATRIARCH_PARFUM",
+		"name": "Matriarch's Perfume",
 		"bitsCost": 1200
 	},
 	{
-		"item": "HOLOGRAM",
+		"name": "Hologram",
 		"bitsCost": 2000
 	},
 	{
-		"item": "DITTO_BLOB",
+		"name": "Ditto Blob",
 		"bitsCost": 600
 	},
 	{
-		"item": "BUILDERS_WAND",
+		"name": "Builder's Wand",
 		"bitsCost": 12000
 	},
 	{
-		"item": "BLOCK_ZAPPER",
+		"name": "Block Zapper",
 		"bitsCost": 5000
 	},
 	{
-		"item": "BITS_TALISMAN",
+		"name": "Bits Talisman",
 		"bitsCost": 15000
 	},
 	{
-		"item": "POCKET_SACK_IN_A_SACK",
+		"name": "Pocket Sack-in-a-Sack",
 		"bitsCost": 8000
 	},
 	{
-		"item": "DUNGEON_SACK",
+		"name": "Dungeon Sack",
 		"bitsCost": 14000
 	},
 	{
-		"item": "RUNE_SACK",
+		"name": "Rune Sack",
 		"bitsCost": 14000
 	},
 	{
-		"item": "FLOWER_SACK",
+		"name": "Flower Sack",
 		"bitsCost": 14000
 	},
 	{
-		"item": "DWARVEN_SACK",
+		"name": "Dwarven Sack",
 		"bitsCost": 14000
 	},
 	{
-		"item": "CRYSTAL_HOLLOWS_SACK",
+		"name": "Crystal Hollows Sack",
 		"bitsCost": 14000
 	},
 	{
-		"item": "PORTALIZER",
+		"name": "Portalizer",
 		"bitsCost": 4800
 	},
 	{
-		"item": "ABIPHONE_CONTACTS_TRIO",
+		"name": "Abiphone Contacts Trio",
 		"bitsCost": 6450
 	},
 	{
-		"item": "SUMSUNG_G3_ABICASE",
+		"name": "Sumsung© G3 Abicase",
 		"bitsCost": 15000
 	},
 	{
-		"item": "SUMSUNG_GG_ABICASE",
+		"name": "Sumsung© GG Abicase",
 		"bitsCost": 25000
 	},
 	{
-		"item": "REZAR_ABICASE",
+		"name": "Rezar® Abicase",
 		"bitsCost": 26000
 	},
 	{
-		"item": "BLUE_BUT_RED_ABICASE",
+		"name": "Blue™ But Red Abicase",
 		"bitsCost": 17000
 	},
 	{
-		"item": "ACTUALLY_BLUE_ABICASE",
+		"name": "Actually Blue™ Abicase",
 		"bitsCost": 17000
 	},
 	{
-		"item": "BLUE_BUT_GREEN_ABICASE",
+		"name": "Blue™ But Green Abicase",
 		"bitsCost": 17000
 	},
 	{
-		"item": "BLUE_BUT_YELLOW_ABICASE",
+		"name": "Blue™ But Yellow Abicase",
 		"bitsCost": 17000
 	},
 	{
-		"item": "LIGHTER_BLUE_ABICASE",
+		"name": "Lighter Blue™ Abicase",
 		"bitsCost": 17000
 	},
 	{
-		"item": "AUTOPET_RULES_2_PACK",
+		"name": "Autopet Rules 2-Pack",
 		"bitsCost": 21000
 	},
 	{
-		"item": "PURE_WHITE_DYE",
+		"name": "Pure White Dye",
 		"bitsCost": 250000
 	},
 	{
-		"item": "PURE_BLACK_DYE",
+		"name": "Pure Black Dye",
 		"bitsCost": 250000
 	},
 	{
-		"item": "INFERNO_FUEL_BLOCK",
+		"name": "Inferno Fuel Block",
 		"bitsCost": 75
 	},
 	{
-		"item": "EXPERTISE_I_BOOK",
+		"name": "Expertise I",
 		"bitsCost": 4000
 	},
 	{
-		"item": "COMPACT_I_BOOK",
+		"name": "Compact I",
 		"bitsCost": 4000
 	},
 	{
-		"item": "CULTIVATING_I_BOOK",
+		"name": "Cultivating I",
 		"bitsCost": 4000
 	},
 	{
-		"item": "CHAMPION_I_BOOK",
+		"name": "Champion I",
 		"bitsCost": 4000
 	},
 	{
-		"item": "HECATOMB_I_BOOK",
+		"name": "Hecatomb I",
 		"bitsCost": 6000
 	},
 	{
-		"item": "TOXOPHILITE_I_BOOK",
+		"name": "Toxophilite I",
 		"bitsCost": 4000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_WALK_SPEED",
+		"name": "Speed Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_INTELLIGENCE",
+		"name": "Intelligence Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_CRITICAL_DAMAGE",
+		"name": "Crit Damage Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_CRITICAL_CHANCE",
+		"name": "Crit Chance Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_STRENGTH",
+		"name": "Strength Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_DEFENSE",
+		"name": "Defense Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_HEALTH",
+		"name": "Health Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_MAGIC_FIND",
+		"name": "Magic Find Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_FEROCITY",
+		"name": "Ferocity Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_SEA_CREATURE_CHANCE",
+		"name": "Sea Creature Chance Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "ATTACK_SPEED_ENRTALISMAN_ENRICHMENT_ATTACK_SPEEDICHMENT",
+		"name": "Attack Speed Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"item": "TALISMAN_ENRICHMENT_SWAPPER",
+		"name": "Accessory Enrichment Swapper",
 		"bitsCost": 200
 	}
 ]

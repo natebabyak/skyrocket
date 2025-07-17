@@ -9,13 +9,9 @@ export function createCachedFetcher<T>(url: string, ttl: number) {
 			try {
 				const response = await fetch(url);
 
-				if (!response.ok) {
-					throw new Error(`${response.status}: ${response.statusText}`);
-				}
+				if (!response.ok) throw new Error(`${response.status}: ${response.statusText}`);
 
-				const json = await response.json();
-
-				cache = json;
+				cache = await response.json();
 				lastUpdated = now;
 			} catch (error) {
 				console.error(error);

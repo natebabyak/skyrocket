@@ -3,7 +3,7 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import { toast } from 'svelte-sonner';
 
-	let { cellText, copyText }: { cellText: string, copyText: string } = $props();
+	let { icon, name, copyText }: { icon: string; name: string; copyText: string } = $props();
 </script>
 
 <Button
@@ -20,6 +20,7 @@
 	variant="ghost"
 	class="group"
 >
-	{cellText}
+	<img alt={name} src={icon} class="size-5" />
+	{name}
 	<Copy class="opacity-0 transition-opacity group-hover:opacity-100" />
 </Button>

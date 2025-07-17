@@ -1,0 +1,97 @@
+[
+	{
+		"label": "Currencies",
+		"items": [
+			{
+				"href": "/currencies/agathas-coupons",
+				"title": "Agatha's Coupons"
+			},
+			{
+				"href": "/currencies/ananke-feathers",
+				"title": "Ananke Feathers"
+			},
+			{
+				"href": "/currencies/bits",
+				"title": "Bits"
+			},
+			{
+				"href": "/currencies/carnival-tokens",
+				"title": "Carnival Tokens"
+			},
+			{
+				"href": "/currencies/chocolate",
+				"title": "Chocolate"
+			},
+			{
+				"href": "/currencies/copper",
+				"title": "Copper"
+			},
+			{
+				"href": "/currencies/jacobs-tickets",
+				"title": "Jacob's Tickets"
+			},
+			{
+				"href": "/currencies/medals",
+				"title": "Medals"
+			},
+			{
+				"href": "/currencies/motes",
+				"title": "Motes"
+			},
+			{
+				"href": "/currencies/north-stars",
+				"title": "North Stars"
+			},
+			{
+				"href": "/currencies/pelts",
+				"title": "Pelts"
+			},
+			{
+				"href": "/currencies/skyblock-gems",
+				"title": "SkyBlock Gems"
+			}
+		]
+	},
+	{
+		"label": "Flips",
+		"items": [
+			{
+				"href": "/flips/bazaar",
+				"title": "Bazaar"
+			},
+			{
+				"href": "/flips/books",
+				"title": "Books"
+			},
+			{
+				"href": "/flips/crafts",
+				"title": "Crafts"
+			}
+		]
+	},
+	{
+		"label": "Profits",
+		"items": [
+			{
+				"href": "/profits/archfiend-dice",
+				"title": "Archfiend Dice"
+			},
+			{
+				"href": "/profits/dungeons",
+				"title": "Dungeons"
+			},
+			{
+				"href": "/profits/frozen-corpses",
+				"title": "Frozen Corpses"
+			},
+			{
+				"href": "/profits/jerry-boxes",
+				"title": "Jerry Boxes"
+			},
+			{
+				"href": "/profits/kuudra",
+				"title": "Kuudra"
+			}
+		]
+	}
+]
