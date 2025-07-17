@@ -6,7 +6,7 @@
 	import { cn } from '$lib/utils';
 	import type { Column } from '@tanstack/table-core';
 
-	const { column, headerText }: { column: Column<Column, unknown>; headerText: string } = $props();
+	const { column, headerText }: { column: Column<any, unknown>; headerText: string } = $props();
 
 	const isSorted = $derived(column.getIsSorted());
 </script>
