@@ -1,11 +1,4 @@
-type ItemFlag = 
-	| 'NONE' 
-	| 'BAZAAR'
-	| 'TRADEABLE'
-	| 'AUCTION'
-	| 'FIRE_SALE'
-	| 'GLOWING'
-	| 'MUSEUM'
+type ItemFlag = 'NONE' | 'BAZAAR' | 'TRADEABLE' | 'AUCTION' | 'FIRE_SALE' | 'GLOWING' | 'MUSEUM';
 
 export type ItemMetadataElement = {
 	name: string | null;

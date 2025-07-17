@@ -1,0 +1,218 @@
+[
+	{
+		"item": "GOD_POTION_2",
+		"bitsCost": 1500
+	},
+	{
+		"item": "KISMET_FEATHER",
+		"bitsCost": 1350
+	},
+	{
+		"item": "KAT_FLOWER",
+		"bitsCost": 500
+	},
+	{
+		"item": "KAT_BOUQUET",
+		"bitsCost": 2500
+	},
+	{
+		"item": "HEAT_CORE",
+		"bitsCost": 3000
+	},
+	{
+		"item": "HYPER_CATALYST_UPGRADE",
+		"bitsCost": 300
+	},
+	{
+		"item": "ULTIMATE_CARROT_CANDY_UPGRADE",
+		"bitsCost": 8000
+	},
+	{
+		"item": "COLOSSAL_EXP_BOTTLE_UPGRADE",
+		"bitsCost": 1200
+	},
+	{
+		"item": "JUMBO_BACKPACK_UPGRADE",
+		"bitsCost": 4000
+	},
+	{
+		"item": "MINION_STORAGE_EXPANDER",
+		"bitsCost": 1500
+	},
+	{
+		"item": "MATRIARCH_PARFUM",
+		"bitsCost": 1200
+	},
+	{
+		"item": "HOLOGRAM",
+		"bitsCost": 2000
+	},
+	{
+		"item": "DITTO_BLOB",
+		"bitsCost": 600
+	},
+	{
+		"item": "BUILDERS_WAND",
+		"bitsCost": 12000
+	},
+	{
+		"item": "BLOCK_ZAPPER",
+		"bitsCost": 5000
+	},
+	{
+		"item": "BITS_TALISMAN",
+		"bitsCost": 15000
+	},
+	{
+		"item": "POCKET_SACK_IN_A_SACK",
+		"bitsCost": 8000
+	},
+	{
+		"item": "DUNGEON_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"item": "RUNE_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"item": "FLOWER_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"item": "DWARVEN_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"item": "CRYSTAL_HOLLOWS_SACK",
+		"bitsCost": 14000
+	},
+	{
+		"item": "PORTALIZER",
+		"bitsCost": 4800
+	},
+	{
+		"item": "ABIPHONE_CONTACTS_TRIO",
+		"bitsCost": 6450
+	},
+	{
+		"item": "SUMSUNG_G3_ABICASE",
+		"bitsCost": 15000
+	},
+	{
+		"item": "SUMSUNG_GG_ABICASE",
+		"bitsCost": 25000
+	},
+	{
+		"item": "REZAR_ABICASE",
+		"bitsCost": 26000
+	},
+	{
+		"item": "BLUE_BUT_RED_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"item": "ACTUALLY_BLUE_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"item": "BLUE_BUT_GREEN_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"item": "BLUE_BUT_YELLOW_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"item": "LIGHTER_BLUE_ABICASE",
+		"bitsCost": 17000
+	},
+	{
+		"item": "AUTOPET_RULES_2_PACK",
+		"bitsCost": 21000
+	},
+	{
+		"item": "PURE_WHITE_DYE",
+		"bitsCost": 250000
+	},
+	{
+		"item": "PURE_BLACK_DYE",
+		"bitsCost": 250000
+	},
+	{
+		"item": "INFERNO_FUEL_BLOCK",
+		"bitsCost": 75
+	},
+	{
+		"item": "EXPERTISE_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"item": "COMPACT_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"item": "CULTIVATING_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"item": "CHAMPION_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"item": "HECATOMB_I_BOOK",
+		"bitsCost": 6000
+	},
+	{
+		"item": "TOXOPHILITE_I_BOOK",
+		"bitsCost": 4000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_WALK_SPEED",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_INTELLIGENCE",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_CRITICAL_DAMAGE",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_CRITICAL_CHANCE",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_STRENGTH",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_DEFENSE",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_HEALTH",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_MAGIC_FIND",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_FEROCITY",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_SEA_CREATURE_CHANCE",
+		"bitsCost": 5000
+	},
+	{
+		"item": "ATTACK_SPEED_ENRTALISMAN_ENRICHMENT_ATTACK_SPEEDICHMENT",
+		"bitsCost": 5000
+	},
+	{
+		"item": "TALISMAN_ENRICHMENT_SWAPPER",
+		"bitsCost": 200
+	}
+]

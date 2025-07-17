@@ -1,4 +1,4 @@
-type BazaarFlip = {
+export type BazaarFlip = {
 	itemTag: string | null;
 	buyPrice: number;
 	sellPrice: number;
