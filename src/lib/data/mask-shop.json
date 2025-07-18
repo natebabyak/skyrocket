@@ -1,0 +1,30 @@
+[
+	{
+		"mask": "Carnival Mask Bag",
+		"carnivalTokens": 250
+	},
+	{
+		"mask": "Zombie Mask",
+		"carnivalTokens": 500
+	},
+	{
+		"mask": "Salmon Mask",
+		"carnivalTokens": 500
+	},
+	{
+		"mask": "Armadillo Mask",
+		"carnivalTokens": 1000
+	},
+	{
+		"mask": "Parrot Mask",
+		"carnivalTokens": 1000
+	},
+	{
+		"mask": "Bee Mask",
+		"carnivalTokens": 2000
+	},
+	{
+		"mask": "Frog Mask",
+		"carnivalTokens": 2000
+	}
+]

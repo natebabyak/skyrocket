@@ -10,14 +10,14 @@ export type Item = {
 	category: string;
 	tier: string;
 	stats: {
-		DEFENSE: 75;
-		HEALTH: 20;
+		DEFENSE: number;
+		HEALTH: number;
 	};
 	npc_sell_price: number;
 	id: string;
 };
 
-export type ItemsData = {
+export type Items = {
 	success: boolean;
 	lastUpdated: number;
 	items: Item[];

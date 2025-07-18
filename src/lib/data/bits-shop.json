@@ -144,27 +144,27 @@
 		"bitsCost": 75
 	},
 	{
-		"name": "Expertise I",
+		"name": "expertise 1 enchant",
 		"bitsCost": 4000
 	},
 	{
-		"name": "Compact I",
+		"name": "compact 1 enchant",
 		"bitsCost": 4000
 	},
 	{
-		"name": "Cultivating I",
+		"name": "cultivating 1 enchant",
 		"bitsCost": 4000
 	},
 	{
-		"name": "Champion I",
+		"name": "champion 1 enchant",
 		"bitsCost": 4000
 	},
 	{
-		"name": "Hecatomb I",
+		"name": "hecatomb 1 enchant",
 		"bitsCost": 6000
 	},
 	{
-		"name": "Toxophilite I",
+		"name": "toxophilite 1 enchant",
 		"bitsCost": 4000
 	},
 	{
@@ -176,11 +176,11 @@
 		"bitsCost": 5000
 	},
 	{
-		"name": "Crit Damage Enrichment",
+		"name": "Critical Damage Enrichment",
 		"bitsCost": 5000
 	},
 	{
-		"name": "Crit Chance Enrichment",
+		"name": "Critical Chance Enrichment",
 		"bitsCost": 5000
 	},
 	{
