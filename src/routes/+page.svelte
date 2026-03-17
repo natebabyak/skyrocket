@@ -12,7 +12,7 @@
 </svelte:head>
 
 <main class="mx-auto mt-18.25 flex flex-col border-x md:max-w-2xl">
-	<img alt="Locations" src={locations} />
+	<enhanced:img alt="Locations" src={locations} />
 	<Separator />
 	<div class="flex flex-col gap-4 p-4">
 		<h1 class="text-6xl leading-tight">
@@ -32,8 +32,8 @@
 			<p class="text-balance text-muted-foreground">See the most profitable flips on the bazaar</p>
 			<Button href="/flips/bazaar" class="mt-auto">View Bazaar Flips</Button>
 		</div>
-		<img alt="Bazaar Alley" src={bazaarAlley} />
-		<img alt="Community Center" src={communityCenter} />
+		<enhanced:img alt="Bazaar Alley" src={bazaarAlley} />
+		<enhanced:img alt="Community Center" src={communityCenter} />
 		<div class="flex flex-col gap-4 bg-background p-4">
 			<h3 class="text-xl font-medium">Bits Shop</h3>
 			<p class="text-balance text-muted-foreground">Find out the optimal way to spend your Bits</p>
@@ -48,6 +48,6 @@
 				>View on GitHub</Button
 			>
 		</div>
-		<img alt="Wizard Tower" src={wizardTower} />
+		<enhanced:img alt="Wizard Tower" src={wizardTower} />
 	</div>
 </main>

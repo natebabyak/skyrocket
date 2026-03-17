@@ -17,7 +17,7 @@
 </script>
 
 <Button onclick={copyToClipboard} variant="ghost" class="group w-full justify-start">
-	<img alt={name} src={icon} class="size-5" />
+	<enhanced:img alt={name} src={icon} class="size-5" />
 	{name}
 	<div class="relative ml-auto size-4">
 		<Copy

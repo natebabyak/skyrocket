@@ -33,14 +33,21 @@
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger>{label}</NavigationMenu.Trigger>
 						<NavigationMenu.Content>
-							<ul>
-								<li>
-									{#each items as { href, title }, i (i)}
-										<NavigationMenu.Link {href} class="text-nowrap">
-											{title}
+							<ul class="grid w-75 gap-2 p-2 sm:w-100 md:w-125 md:grid-cols-2 lg:w-150">
+								{#each items as { href, title }, i (i)}
+									<li>
+										<NavigationMenu.Link>
+											{#snippet child()}
+												<a
+													href={resolve(href as '/')}
+													class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+												>
+													<div class="text-sm leading-none font-medium">{title}</div>
+												</a>
+											{/snippet}
 										</NavigationMenu.Link>
-									{/each}
-								</li>
+									</li>
+								{/each}
 							</ul>
 						</NavigationMenu.Content>
 					</NavigationMenu.Item>
